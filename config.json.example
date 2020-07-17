@@ -1,0 +1,6 @@
+{
+    "token": "Put the bot token here",
+    "prefix": "-",
+
+    "wit-token": "Put the token you get from Wit.ai here"
+}

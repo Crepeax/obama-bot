@@ -1,5 +1,5 @@
 # Obama Bot
-A small Discord bot I made for the r/Obamium Discord server.
+A small Discord bot with crappy code that I made for the r/Obamium Discord server.
 
 # Copyright
     Copyright (C) 2020  Im_Verum

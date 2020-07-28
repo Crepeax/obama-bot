@@ -28,7 +28,9 @@ client.once('ready', () => {
     console.log('Logged in as ' + client.user.username);
     client.user.setActivity(`hamborger`, {type: "STREAMING", url: "https://www.youtube.com/watch?v=sHwvUFjaNdU"});
 
-    require('./karma'); // Start the karma thingy
+    // Start the karma and vibe chat thingy
+    require('./karma');
+    require('./vibechat');
 });
 
 client.on('guildCreate', g => {
@@ -49,6 +51,17 @@ client.on('message', message => {
             .setTitle('You are not allowed to use this.')
             .setDescription('Only the mod team can use this command.')
             .setImage('https://media1.tenor.com/images/1056e92668594b262d3338c897ce9bd3/tenor.gif?itemid=7706023');
+            if (silent !== true) message.channel.send(erEmbed);
+            return true;
+        }
+        return false;
+    }
+    
+    function checkPremium(silent) {
+        if (!message.member.permissions.has('ADMINISTRATOR') && !message.member.roles.cache.has('718862546395988078' /* True ObamaFan */) && !message.member.roles.cache.has('653569849888473145' /* Obama sphere */) && !message.member.roles.cache.has('733394201957498901' /* Obama circle */)) {
+            let erEmbed = new Discord.MessageEmbed()
+            .setTitle('You are not allowed to use this.')
+            .setDescription('Only approved users can use this command.');
             if (silent !== true) message.channel.send(erEmbed);
             return true;
         }
@@ -122,7 +135,7 @@ client.on('message', message => {
                 .addField('-vbucks', 'Totally working V-Bucks generator')
                 .addField('-copypasta', 'oh shit oh fuck')
                 .addField('-karma', 'Shows your karma and coins on this server')
-                .addField('-topkarma', 'Shows the users with the highest karma!')
+                .addField('-top', 'Shows the users with the highest karma!')
                 .addField('-ping', 'Shows the bot\'s latency')
                 .addField('-brother', 'RGBRoachGang brothers, use this command to get access to a special channel!')
                 .addField('­', '**----- Admin commands -----**')
@@ -239,6 +252,7 @@ client.on('message', message => {
                 message.channel.send(res);
             break;
             case 'copypasta':
+                if (checkPremium()) return;
                 if (!args[0]) args[0] = '';
                 switch(args[0].toLowerCase()) {
                     case 'toddler':
@@ -283,8 +297,76 @@ client.on('message', message => {
                         message.channel.send('The cum accelerates. The cum begins to gravitate towards itself, forming a comet trail of semen. Astronomers begin calling you the “Cummet.”', {tts: true});
                         message.channel.send('You are stuck in space forever, stripped of your body and senses, forced to endure an eternity of cumshots. Eventually, you stop thinking.', {tts: true});
                     break;
+                    case 'navyseal':
+                    case 'navy':
+                        message.channel.send('What the fuck did you just fucking say about me, you little bitch?', {tts: true});
+                        message.channel.send('I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills.', {tts: true});
+                        message.channel.send('I am trained in gorilla warfare and I’m the top sniper in the entire US armed forces. You are nothing to me but just another target.', {tts: true});
+                        message.channel.send('I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words.', {tts: true});
+                        message.channel.send('You think you can get away with saying that shit to me over the Internet? Think again, fucker.', {tts: true});
+                        message.channel.send('As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot.', {tts: true});
+                        message.channel.send('The storm that wipes out the pathetic little thing you call your life.', {tts: true});
+                        message.channel.send('You’re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that’s just with my bare hands.', {tts: true});
+                        message.channel.send('Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps', {tts: true});
+                        message.channel.send('and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit.', {tts: true});
+                        message.channel.send('If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue.', {tts: true});
+                        message.channel.send('But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo.', {tts: true});
+                    break;
+                    case 'a':
+                    case 'aa':
+                    case 'aaa':
+                    case 'aaaa':
+                    case 'aaaaa':
+                    case 'aaaaaa':
+                    case 'aaaaaaa':
+                    case 'aaaaaaaa':
+                    case 'aaaaaaaaa':
+                    case 'aaaaaaaaaa':
+                    case 'aaaaaaaaaaa':
+                    case 'aaaaaaaaaaaa':
+                    case 'aaaaaaaaaaaaa':
+                    case 'aaaaaaaaaaaaaa':
+                    case 'aaaaaaaaaaaaaaa':
+                    case 'aaaaaaaaaaaaaaaa':
+                    // i want to die
+                        const oldName = message.guild.members.cache.get(client.user.id).nickname;
+                        message.guild.members.cache.get(client.user.id).setNickname('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA').then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true}).then(() => {
+                            message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', {tts: true})
+                            .then(() => message.guild.members.cache.get(client.user.id).setNickname(oldName));
+                            })})})})})})})})})})})})})})})})})})})})})})})})})})})})});
+                        });
+                    break;
                     default:
-                        message.channel.send('Choose a copypasta:\n- toddler\n- cum');
+                        message.channel.send('cum', {tts: true}).then(m => m.edit('Choose a copypasta:\n- toddler (10 lines, 1:15 minutes)\n- cum (28 lines, 4:10 minutes)\n- navyseal (12 lines, 1:45 minutes)\n- aaaaaaaaaa (30 lines, *forever*)'));
                     break;
                 }
             break;
@@ -313,10 +395,9 @@ client.on('message', message => {
 
                 message.channel.send(karmaembed);
             break;
-            case 'topkarma':
             case 'top':
                 const karmaID1 = '733339045463064607';
-                const karmaEmote1 = message.guild.emojis.cache.get(karmaID1).toString();;
+                const karmaEmote1 = message.guild.emojis.cache.get(karmaID1).toString();
                 let karmaboard = [];
                 karma.keyArray().forEach(uid => {
                     karmaboard.push({id: uid, karma: karma.get(uid)});

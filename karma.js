@@ -34,6 +34,12 @@ const awards = {
         cost: 20000,
         give: 2500,
         role: "733407211178557583"
+    },
+    "739266335128944683": {
+        name: "Argentobamium",
+        cost: 100000,
+        give: 69420,
+        role: "739266563038904421"
     }
 }
 
@@ -74,7 +80,7 @@ client.on('messageReactionAdd', async function(reaction, user) {
         }
         coins.set(user.id, (coins.get(user.id) - award.cost));
         coins.set(message.author.id, (coins.get(message.author.id) + award.give));
-        message.channel.send(`${message.author} has received the ${award.name} award${award.give > 0 ? ` and ${award.give} coins` : ''} by ${user}!`);
+        message.channel.send(`${user} just gave the ${client.emojis.cache.get(reaction.emoji.id).toString()} ${award.name} award (Price: ${award.cost} coins) to ${message.author}${award.give > 0 ? `. ${message.author.username} has received ${award.give} coins` : ''}!`);
         require('./karma').updateRoles(user.id);
         require('./karma').updateRoles(message.author.id);
     }

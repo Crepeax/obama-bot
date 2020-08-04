@@ -20,7 +20,7 @@ client.on('messageReactionAdd', async function(reaction, user) {
 
     const count = reaction.message.reactions.cache.filter(e => e.emoji.id == emoji).array()[0].count;
     
-    if (count == reaction.message.attachments.array().length > 0 ? 3 : 5) publish = true; // When the message has an attachment, publish it at 3 upvotes, else at 5
+    if (count == 3) publish = true; // When the message has an attachment, publish it at 3 upvotes, else at 5
 
     // This publishes the message using a direct API call. (Copied from https://github.com/Forcellrus/Discord-Auto-Publisher/blob/master/bot.js)
     if (!publish) return;

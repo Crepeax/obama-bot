@@ -313,6 +313,11 @@ client.on('message', message => {
                         message.channel.send('If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue.', {tts: true});
                         message.channel.send('But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo.', {tts: true});
                     break;
+                    case 'Ben Shapiro':
+                        message.channel.send('You know, let\'s just say, hypothetically speaking, that I were to have sex with your mom.', {tts: true});
+                        message.channel.send('Now, hypothetically speaking, if this did happen, I mean, you must remember that all physical matter has a very thin layer of atoms surrounding it, so technically, you are never truly touching anything or anyone, but instead, the atoms surrounding your body and this object or person are coming into contact with one another.', {tts: true});
+                        message.channel.send('So, once again, hypothetically speaking, if I were to attempt to have sex with your mom, I would fail miserably, because, according to science, our bodies would never come into contact with one another.', {tts: true});    
+                    break;
                     case 'a':
                     case 'aa':
                     case 'aaa':

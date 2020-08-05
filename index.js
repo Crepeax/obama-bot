@@ -313,7 +313,7 @@ client.on('message', message => {
                         message.channel.send('If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue.', {tts: true});
                         message.channel.send('But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo.', {tts: true});
                     break;
-                    case 'Ben-Shapiro':
+                    case 'ben-shapiro':
                         message.channel.send('You know, let\'s just say, hypothetically speaking, that I were to have sex with your mom.', {tts: true});
                         message.channel.send('Now, hypothetically speaking, if this did happen, I mean, you must remember that all physical matter has a very thin layer of atoms surrounding it, so technically, you are never truly', {tts: true});
                         message.channel.send('touching anything or anyone, but instead, the atoms surrounding your body and this object or person are coming into contact with one another.', {tts: true});
@@ -374,7 +374,7 @@ client.on('message', message => {
                         });
                     break;
                     default:
-                        message.channel.send('cum', {tts: true}).then(m => m.edit('Choose a copypasta:\n- toddler (10 lines, 1:15 minutes)\n- cum (28 lines, 4:10 minutes)\n- navyseal (12 lines, 1:45 minutes)\n- aaaaaaaaaa (30 lines, *forever*)\n- Ben-Shapiro (5 lines, 50.59 seconds)'));
+                        message.channel.send('cum', {tts: true}).then(m => m.edit('Choose a copypasta:\n- toddler (10 lines, 1:15 minutes)\n- cum (28 lines, 4:10 minutes)\n- navyseal (12 lines, 1:45 minutes)\n- aaaaaaaaaa (30 lines, *forever*)\n- ben-shapiro (5 lines, 50.59 seconds)'));
                     break;
                 }
             break;

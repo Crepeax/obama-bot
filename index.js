@@ -374,7 +374,7 @@ client.on('message', message => {
                         });
                     break;
                     default:
-                        message.channel.send('cum', {tts: true}).then(m => m.edit('Choose a copypasta:\n- toddler (10 lines, 1:15 minutes)\n- cum (28 lines, 4:10 minutes)\n- navyseal (12 lines, 1:45 minutes)\n- aaaaaaaaaa (30 lines, *forever*)'));
+                        message.channel.send('cum', {tts: true}).then(m => m.edit('Choose a copypasta:\n- toddler (10 lines, 1:15 minutes)\n- cum (28 lines, 4:10 minutes)\n- navyseal (12 lines, 1:45 minutes)\n- aaaaaaaaaa (30 lines, *forever*)\n- Ben-Shapiro (5 lines, 50.59 seconds)'));
                     break;
                 }
             break;

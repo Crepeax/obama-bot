@@ -6,6 +6,9 @@ const emoji = '719181283393142786';
 
 client.on('messageReactionAdd', async function(reaction, user) {
 
+    // Some people abused this "feature", to it is temporarily disabled. 
+    return;
+
     let publish = false;
 
     // Fetch partials

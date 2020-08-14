@@ -26,7 +26,7 @@ function random(low, high) {
 
 client.once('ready', () => {
     console.log('Logged in as ' + client.user.username);
-    client.user.setActivity(`hamborger`, {type: "STREAMING", url: "https://www.youtube.com/watch?v=sHwvUFjaNdU"});
+    client.user.setActivity(`cock and ball torture`, {type: "STREAMING", url: "https://www.youtube.com/watch?v=sHwvUFjaNdU"});
 
     // Start the module thingys
     require('./karma');
